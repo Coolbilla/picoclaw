@@ -39,5 +39,5 @@ USER picoclaw
 # Run onboard to create initial directories and config
 RUN /usr/local/bin/picoclaw onboard
 
-ENTRYPOINT ["picoclaw"]
-CMD ["gateway"]
+ENTRYPOINT []
+CMD mkdir -p /home/picoclaw/.picoclaw && cp /etc/secrets/config.json /home/picoclaw/.picoclaw/config.json && /usr/local/bin/picoclaw gateway
